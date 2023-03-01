@@ -8,7 +8,6 @@ import (
 	"api/src/respostas"
 	"encoding/json"
 	"errors"
-	"fmt"
 	"io/ioutil"
 	"net/http"
 	"strconv"
