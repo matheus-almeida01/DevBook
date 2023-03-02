@@ -357,7 +357,7 @@ func AtualizarSenha(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	if erro = seguranca.VerificarSenha(senhaSalvaNoBanco,  senha.Atual); erro != nil {
+	if erro = seguranca.VerificarSenha(senhaSalvaNoBanco, senha.Atual); erro != nil {
 		respostas.Erro(w, http.StatusUnauthorized, errors.New("a senha atual não condiz com a que esta salva no banco"))
 		return
 	}
@@ -374,5 +374,5 @@ func AtualizarSenha(w http.ResponseWriter, r *http.Request) {
 	}
 
 	respostas.JSON(w, http.StatusNoContent, nil)
-	
+
 }
